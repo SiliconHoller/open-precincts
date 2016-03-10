@@ -4,7 +4,7 @@ Voter information, tallying, and coordination software
 This is an FOSS project, whose primary purpose is to support election/legislative campaigns in a bottom-up manner.  The primary audiences are those who are running an independent, low-budget, or "insurgent" campaign that does not have, does not want, or cannot afford access to the commercially available "Voter Activation Network" (VAN) products that are in existence today.
 
 # Focus
-The initial implementation will be Ohio-centric.  Due to the available election laws and resources, it is possible to create a largely automated software package that can pull in official voter history, organize by precints (the smallest voting unit in Ohio), and collate the information into a useful, presentable stream of live data that can be used to support a campaign or local party hierarchy.
+The initial implementation will be Ohio-centric.  Due to the available election laws and resources, it is possible to create a largely automated software package that can pull in official voter history, organize by precincts (the smallest voting unit in Ohio), and collate the information into a useful, presentable stream of live data that can be used to support a campaign or local party hierarchy.
 
 # Goals
 
