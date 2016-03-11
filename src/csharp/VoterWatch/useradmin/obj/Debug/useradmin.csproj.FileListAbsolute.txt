@@ -1,0 +1,7 @@
+C:\Users\David\Desktop\precinct_captains\VoterWatch\useradmin\bin\useradmin.dll
+C:\Users\David\Desktop\precinct_captains\VoterWatch\useradmin\bin\useradmin.pdb
+C:\Users\David\Desktop\precinct_captains\VoterWatch\useradmin\obj\Debug\useradmin.dll
+C:\Users\David\Desktop\precinct_captains\VoterWatch\useradmin\obj\Debug\useradmin.pdb
+C:\Users\David\Desktop\precinct_captains\VoterWatch\useradmin\bin\VoterWatch.dll
+C:\Users\David\Desktop\precinct_captains\VoterWatch\useradmin\bin\VoterWatch.pdb
+C:\Users\David\Desktop\precinct_captains\VoterWatch\useradmin\obj\Debug\useradmin.csprojResolveAssemblyReference.cache

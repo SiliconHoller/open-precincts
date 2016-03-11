@@ -1,0 +1,8 @@
+C:\Users\David\Desktop\precinct_captains\VoterWatch\VoterWatchServices\bin\Debug\VoterWatchServices.dll.config
+C:\Users\David\Desktop\precinct_captains\VoterWatch\VoterWatchServices\bin\Debug\VoterWatchServices.dll
+C:\Users\David\Desktop\precinct_captains\VoterWatch\VoterWatchServices\bin\Debug\VoterWatchServices.pdb
+C:\Users\David\Desktop\precinct_captains\VoterWatch\VoterWatchServices\bin\Debug\VoterWatch.dll
+C:\Users\David\Desktop\precinct_captains\VoterWatch\VoterWatchServices\bin\Debug\VoterWatch.pdb
+C:\Users\David\Desktop\precinct_captains\VoterWatch\VoterWatchServices\obj\Debug\VoterWatchServices.csprojResolveAssemblyReference.cache
+C:\Users\David\Desktop\precinct_captains\VoterWatch\VoterWatchServices\obj\Debug\VoterWatchServices.dll
+C:\Users\David\Desktop\precinct_captains\VoterWatch\VoterWatchServices\obj\Debug\VoterWatchServices.pdb

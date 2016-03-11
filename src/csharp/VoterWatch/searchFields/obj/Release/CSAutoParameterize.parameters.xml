@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="voterwatchEntities-Web.config Connection String" description="voterwatchEntities Connection String used in web.config by the application to access the database." defaultvalue="metadata=res://*/Tracking.csdl|res://*/Tracking.ssdl|res://*/Tracking.msl;provider=MySql.Data.MySqlClient;provider connection string=&quot;server=vwatchdb.celv3evjhsqi.us-east-1.rds.amazonaws.com:3306;User Id=votewatcher;password=Vmaaw22%;Persist Security Info=True;database=voterwatch&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\David\\Desktop\\precinct_captains\\VoterWatch\\searchFields\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='voterwatchEntities']/@connectionString" />
+  </parameter>
+</parameters>

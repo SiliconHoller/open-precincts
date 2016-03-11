@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://siliconholler.net/geopolitical" elementFormDefault="qualified" targetNamespace="http://siliconholler.net/geopolitical" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/precinctcaptain/voterdata/VoterInfo.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://localhost/precinctcaptain/voterdata/VoterInfo.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="searchVoters">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="stateid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="countyid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="districtid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lastname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="firstname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="middlename" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="suffix" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="yob" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="skip" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="take" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="seq" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="searchVotersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="searchVotersResult" nillable="true" type="tns:votersearch" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="votersearch">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="seq" type="xs:int" />
+      <xs:element minOccurs="0" name="skip" type="xs:int" />
+      <xs:element minOccurs="0" name="take" type="xs:int" />
+      <xs:element minOccurs="0" name="vresults" nillable="true" type="tns:ArrayOfvoter" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="votersearch" nillable="true" type="tns:votersearch" />
+  <xs:complexType name="ArrayOfvoter">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="voter" nillable="true" type="tns:voter" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfvoter" nillable="true" type="tns:ArrayOfvoter" />
+  <xs:complexType name="voter">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="addresses" nillable="true" type="tns:ArrayOfaddress" />
+      <xs:element minOccurs="0" name="affiliationid" type="xs:int" />
+      <xs:element minOccurs="0" name="countyid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="districts" nillable="true" type="tns:ArrayOfdistrict" />
+      <xs:element minOccurs="0" name="firstname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="lastname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="middlename" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="partyaffiliation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="registrationdate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="stateid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="suffix" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="voterid" type="xs:int" />
+      <xs:element minOccurs="0" name="yob" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="voter" nillable="true" type="tns:voter" />
+  <xs:complexType name="ArrayOfaddress">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="address" nillable="true" type="tns:address" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfaddress" nillable="true" type="tns:ArrayOfaddress" />
+  <xs:complexType name="address">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="address1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="address2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="addressid" type="xs:int" />
+      <xs:element minOccurs="0" name="city" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="state" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="typeid" type="tns:addressflags" />
+      <xs:element minOccurs="0" name="zip" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="zipplus" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="address" nillable="true" type="tns:address" />
+  <xs:simpleType name="addressflags">
+    <xs:list>
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="unset">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">0</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="residential">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="mailing">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:list>
+  </xs:simpleType>
+  <xs:element name="addressflags" nillable="true" type="tns:addressflags" />
+  <xs:complexType name="ArrayOfdistrict">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="district" nillable="true" type="tns:district" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfdistrict" nillable="true" type="tns:ArrayOfdistrict" />
+  <xs:complexType name="district">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="children" nillable="true" type="q1:ArrayOfint" />
+      <xs:element minOccurs="0" name="description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="districtid" type="xs:int" />
+      <xs:element minOccurs="0" name="districttype" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="districttypeid" type="xs:int" />
+      <xs:element minOccurs="0" name="identifier" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="parents" nillable="true" type="q2:ArrayOfint" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="district" nillable="true" type="tns:district" />
+  <xs:element name="searchAddresses">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="addrid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="addr1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="addr2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="city" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="state" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="zip" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="z4" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="skip" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="take" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="seq" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="searchAddressesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="searchAddressesResult" nillable="true" type="tns:addresssearch" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="addresssearch">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="aresults" nillable="true" type="tns:ArrayOfaddress" />
+      <xs:element minOccurs="0" name="seq" type="xs:int" />
+      <xs:element minOccurs="0" name="skip" type="xs:int" />
+      <xs:element minOccurs="0" name="take" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="addresssearch" nillable="true" type="tns:addresssearch" />
+  <xs:element name="getVoter">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="vid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getVoterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getVoterResult" nillable="true" type="tns:voter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAddresses">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="vid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAddressesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getAddressesResult" nillable="true" type="tns:ArrayOfaddress" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getPollDistrict">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="vid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getPollDistrictResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getPollDistrictResult" nillable="true" type="tns:district" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getVotingDistricts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="vid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getVotingDistrictsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getVotingDistrictsResult" nillable="true" type="tns:ArrayOfdistrict" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAddressVoters">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="addrid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAddressVotersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getAddressVotersResult" nillable="true" type="tns:votersearch" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getDistrictVoters">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="districtid" type="xs:int" />
+        <xs:element minOccurs="0" name="affid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="skip" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="take" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getDistrictVotersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getDistrictVotersResult" nillable="true" type="tns:ArrayOfvoter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getParties">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getPartiesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getPartiesResult" nillable="true" type="tns:ArrayOfaffiliation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ArrayOfaffiliation">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="affiliation" nillable="true" type="tns:affiliation" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfaffiliation" nillable="true" type="tns:ArrayOfaffiliation" />
+  <xs:complexType name="affiliation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="affiliationid" type="xs:int" />
+      <xs:element minOccurs="0" name="descr" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="partycode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="affiliation" nillable="true" type="tns:affiliation" />
+</xs:schema>

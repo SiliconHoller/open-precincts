@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://siliconholler.net/geopolitical" elementFormDefault="qualified" targetNamespace="http://siliconholler.net/geopolitical" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/precinctcaptain/voteradmin/VoterMaintenance.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://localhost/precinctcaptain/voteradmin/VoterMaintenance.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="addVoter">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="nvoter" nillable="true" type="tns:voter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="voter">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="addresses" nillable="true" type="tns:ArrayOfaddress" />
+      <xs:element minOccurs="0" name="affiliationid" type="xs:int" />
+      <xs:element minOccurs="0" name="countyid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="districts" nillable="true" type="tns:ArrayOfdistrict" />
+      <xs:element minOccurs="0" name="firstname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="lastname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="middlename" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="partyaffiliation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="registrationdate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="stateid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="suffix" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="voterid" type="xs:int" />
+      <xs:element minOccurs="0" name="yob" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="voter" nillable="true" type="tns:voter" />
+  <xs:complexType name="ArrayOfaddress">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="address" nillable="true" type="tns:address" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfaddress" nillable="true" type="tns:ArrayOfaddress" />
+  <xs:complexType name="address">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="address1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="address2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="addressid" type="xs:int" />
+      <xs:element minOccurs="0" name="city" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="state" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="typeid" type="tns:addressflags" />
+      <xs:element minOccurs="0" name="zip" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="zipplus" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="address" nillable="true" type="tns:address" />
+  <xs:simpleType name="addressflags">
+    <xs:list>
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="unset">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">0</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="residential">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="mailing">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:list>
+  </xs:simpleType>
+  <xs:element name="addressflags" nillable="true" type="tns:addressflags" />
+  <xs:complexType name="ArrayOfdistrict">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="district" nillable="true" type="tns:district" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfdistrict" nillable="true" type="tns:ArrayOfdistrict" />
+  <xs:complexType name="district">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="children" nillable="true" type="q1:ArrayOfint" />
+      <xs:element minOccurs="0" name="description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="districtid" type="xs:int" />
+      <xs:element minOccurs="0" name="districttype" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="districttypeid" type="xs:int" />
+      <xs:element minOccurs="0" name="identifier" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="parents" nillable="true" type="q2:ArrayOfint" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="district" nillable="true" type="tns:district" />
+  <xs:element name="addVoterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="addVoterResult" nillable="true" type="tns:voter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="delete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="nvoter" nillable="true" type="tns:voter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="deleteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="deleteResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updateVoter">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="uvoter" nillable="true" type="tns:voter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updateVoterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="updateVoterResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addAddress">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="addr" nillable="true" type="tns:address" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addAddressResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="addAddressResult" nillable="true" type="tns:address" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updateAddress">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="addr" nillable="true" type="tns:address" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updateAddressResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="updateAddressResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="removeAddress">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="addr" nillable="true" type="tns:address" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="removeAddressResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="removeAddressResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addVoterAddress">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="vid" type="xs:int" />
+        <xs:element minOccurs="0" name="addrid" type="xs:int" />
+        <xs:element minOccurs="0" name="tflags" type="tns:addressflags" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addVoterAddressResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="addVoterAddressResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="removeVoterAddress">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="vid" type="xs:int" />
+        <xs:element minOccurs="0" name="addrid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="removeVoterAddressResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="removeVoterAddressResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updateVoterAddress">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="vid" type="xs:int" />
+        <xs:element minOccurs="0" name="addrid" type="xs:int" />
+        <xs:element minOccurs="0" name="tflags" type="tns:addressflags" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updateVoterAddressResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="updateVoterAddressResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="setVoterDistrict">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="vid" type="xs:int" />
+        <xs:element minOccurs="0" name="distid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="setVoterDistrictResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="setVoterDistrictResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

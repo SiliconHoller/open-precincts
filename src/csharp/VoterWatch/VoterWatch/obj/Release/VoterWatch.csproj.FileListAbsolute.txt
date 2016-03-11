@@ -1,0 +1,5 @@
+C:\Users\David\Desktop\precinct_captains\VoterWatch\VoterWatch\bin\Release\VoterWatch.dll.config
+C:\Users\David\Desktop\precinct_captains\VoterWatch\VoterWatch\bin\Release\VoterWatch.dll
+C:\Users\David\Desktop\precinct_captains\VoterWatch\VoterWatch\bin\Release\VoterWatch.pdb
+C:\Users\David\Desktop\precinct_captains\VoterWatch\VoterWatch\obj\Release\VoterWatch.dll
+C:\Users\David\Desktop\precinct_captains\VoterWatch\VoterWatch\obj\Release\VoterWatch.pdb

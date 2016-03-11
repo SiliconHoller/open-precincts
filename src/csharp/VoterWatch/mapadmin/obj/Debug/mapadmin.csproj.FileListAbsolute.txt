@@ -1,0 +1,9 @@
+C:\Users\David\Desktop\precinct_captains\VoterWatch\mapadmin\bin\mapadmin.dll
+C:\Users\David\Desktop\precinct_captains\VoterWatch\mapadmin\bin\mapadmin.pdb
+C:\Users\David\Desktop\precinct_captains\VoterWatch\mapadmin\bin\VoterWatch.dll
+C:\Users\David\Desktop\precinct_captains\VoterWatch\mapadmin\bin\VoterWatch.pdb
+C:\Users\David\Desktop\precinct_captains\VoterWatch\mapadmin\obj\Debug\mapadmin.csprojResolveAssemblyReference.cache
+C:\Users\David\Desktop\precinct_captains\VoterWatch\mapadmin\obj\Debug\mapadmin.dll
+C:\Users\David\Desktop\precinct_captains\VoterWatch\mapadmin\obj\Debug\mapadmin.pdb
+C:\Users\David\Desktop\precinct_captains\VoterWatch\mapadmin\bin\hierarchies.dll
+C:\Users\David\Desktop\precinct_captains\VoterWatch\mapadmin\bin\hierarchies.pdb

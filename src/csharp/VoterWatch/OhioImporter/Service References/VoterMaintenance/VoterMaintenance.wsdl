@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://siliconholler.net/geopolitical" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://siliconholler.net/geopolitical" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://siliconholler.net/geopolitical/Imports">
+      <xsd:import schemaLocation="http://localhost/precinctcaptain/voteradmin/VoterMaintenance.svc?xsd=xsd0" namespace="http://siliconholler.net/geopolitical" />
+      <xsd:import schemaLocation="http://localhost/precinctcaptain/voteradmin/VoterMaintenance.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost/precinctcaptain/voteradmin/VoterMaintenance.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IVoterMaintenance_addVoter_InputMessage">
+    <wsdl:part name="parameters" element="tns:addVoter" />
+  </wsdl:message>
+  <wsdl:message name="IVoterMaintenance_addVoter_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addVoterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVoterMaintenance_delete_InputMessage">
+    <wsdl:part name="parameters" element="tns:delete" />
+  </wsdl:message>
+  <wsdl:message name="IVoterMaintenance_delete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVoterMaintenance_updateVoter_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateVoter" />
+  </wsdl:message>
+  <wsdl:message name="IVoterMaintenance_updateVoter_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateVoterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVoterMaintenance_addAddress_InputMessage">
+    <wsdl:part name="parameters" element="tns:addAddress" />
+  </wsdl:message>
+  <wsdl:message name="IVoterMaintenance_addAddress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVoterMaintenance_updateAddress_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateAddress" />
+  </wsdl:message>
+  <wsdl:message name="IVoterMaintenance_updateAddress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVoterMaintenance_removeAddress_InputMessage">
+    <wsdl:part name="parameters" element="tns:removeAddress" />
+  </wsdl:message>
+  <wsdl:message name="IVoterMaintenance_removeAddress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:removeAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVoterMaintenance_addVoterAddress_InputMessage">
+    <wsdl:part name="parameters" element="tns:addVoterAddress" />
+  </wsdl:message>
+  <wsdl:message name="IVoterMaintenance_addVoterAddress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addVoterAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVoterMaintenance_removeVoterAddress_InputMessage">
+    <wsdl:part name="parameters" element="tns:removeVoterAddress" />
+  </wsdl:message>
+  <wsdl:message name="IVoterMaintenance_removeVoterAddress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:removeVoterAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVoterMaintenance_updateVoterAddress_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateVoterAddress" />
+  </wsdl:message>
+  <wsdl:message name="IVoterMaintenance_updateVoterAddress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateVoterAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVoterMaintenance_setVoterDistrict_InputMessage">
+    <wsdl:part name="parameters" element="tns:setVoterDistrict" />
+  </wsdl:message>
+  <wsdl:message name="IVoterMaintenance_setVoterDistrict_OutputMessage">
+    <wsdl:part name="parameters" element="tns:setVoterDistrictResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IVoterMaintenance">
+    <wsdl:operation name="addVoter">
+      <wsdl:input wsaw:Action="http://siliconholler.net/geopolitical/IVoterMaintenance/addVoter" message="tns:IVoterMaintenance_addVoter_InputMessage" />
+      <wsdl:output wsaw:Action="http://siliconholler.net/geopolitical/IVoterMaintenance/addVoterResponse" message="tns:IVoterMaintenance_addVoter_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="delete">
+      <wsdl:input wsaw:Action="http://siliconholler.net/geopolitical/IVoterMaintenance/delete" message="tns:IVoterMaintenance_delete_InputMessage" />
+      <wsdl:output wsaw:Action="http://siliconholler.net/geopolitical/IVoterMaintenance/deleteResponse" message="tns:IVoterMaintenance_delete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateVoter">
+      <wsdl:input wsaw:Action="http://siliconholler.net/geopolitical/IVoterMaintenance/updateVoter" message="tns:IVoterMaintenance_updateVoter_InputMessage" />
+      <wsdl:output wsaw:Action="http://siliconholler.net/geopolitical/IVoterMaintenance/updateVoterResponse" message="tns:IVoterMaintenance_updateVoter_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addAddress">
+      <wsdl:input wsaw:Action="http://siliconholler.net/geopolitical/IVoterMaintenance/addAddress" message="tns:IVoterMaintenance_addAddress_InputMessage" />
+      <wsdl:output wsaw:Action="http://siliconholler.net/geopolitical/IVoterMaintenance/addAddressResponse" message="tns:IVoterMaintenance_addAddress_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateAddress">
+      <wsdl:input wsaw:Action="http://siliconholler.net/geopolitical/IVoterMaintenance/updateAddress" message="tns:IVoterMaintenance_updateAddress_InputMessage" />
+      <wsdl:output wsaw:Action="http://siliconholler.net/geopolitical/IVoterMaintenance/updateAddressResponse" message="tns:IVoterMaintenance_updateAddress_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="removeAddress">
+      <wsdl:input wsaw:Action="http://siliconholler.net/geopolitical/IVoterMaintenance/removeAddress" message="tns:IVoterMaintenance_removeAddress_InputMessage" />
+      <wsdl:output wsaw:Action="http://siliconholler.net/geopolitical/IVoterMaintenance/removeAddressResponse" message="tns:IVoterMaintenance_removeAddress_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addVoterAddress">
+      <wsdl:input wsaw:Action="http://siliconholler.net/geopolitical/IVoterMaintenance/addVoterAddress" message="tns:IVoterMaintenance_addVoterAddress_InputMessage" />
+      <wsdl:output wsaw:Action="http://siliconholler.net/geopolitical/IVoterMaintenance/addVoterAddressResponse" message="tns:IVoterMaintenance_addVoterAddress_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="removeVoterAddress">
+      <wsdl:input wsaw:Action="http://siliconholler.net/geopolitical/IVoterMaintenance/removeVoterAddress" message="tns:IVoterMaintenance_removeVoterAddress_InputMessage" />
+      <wsdl:output wsaw:Action="http://siliconholler.net/geopolitical/IVoterMaintenance/removeVoterAddressResponse" message="tns:IVoterMaintenance_removeVoterAddress_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateVoterAddress">
+      <wsdl:input wsaw:Action="http://siliconholler.net/geopolitical/IVoterMaintenance/updateVoterAddress" message="tns:IVoterMaintenance_updateVoterAddress_InputMessage" />
+      <wsdl:output wsaw:Action="http://siliconholler.net/geopolitical/IVoterMaintenance/updateVoterAddressResponse" message="tns:IVoterMaintenance_updateVoterAddress_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="setVoterDistrict">
+      <wsdl:input wsaw:Action="http://siliconholler.net/geopolitical/IVoterMaintenance/setVoterDistrict" message="tns:IVoterMaintenance_setVoterDistrict_InputMessage" />
+      <wsdl:output wsaw:Action="http://siliconholler.net/geopolitical/IVoterMaintenance/setVoterDistrictResponse" message="tns:IVoterMaintenance_setVoterDistrict_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

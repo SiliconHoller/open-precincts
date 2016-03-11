@@ -1,0 +1,8 @@
+C:\Users\David\Desktop\precinct_captains\VoterWatch\OhioRawImport\bin\Debug\OhioRawImport.exe.config
+C:\Users\David\Desktop\precinct_captains\VoterWatch\OhioRawImport\bin\Debug\OhioRawImport.exe
+C:\Users\David\Desktop\precinct_captains\VoterWatch\OhioRawImport\bin\Debug\OhioRawImport.pdb
+C:\Users\David\Desktop\precinct_captains\VoterWatch\OhioRawImport\bin\Debug\VoterWatch.dll
+C:\Users\David\Desktop\precinct_captains\VoterWatch\OhioRawImport\bin\Debug\VoterWatch.pdb
+C:\Users\David\Desktop\precinct_captains\VoterWatch\OhioRawImport\obj\x86\Debug\OhioRawImport.csprojResolveAssemblyReference.cache
+C:\Users\David\Desktop\precinct_captains\VoterWatch\OhioRawImport\obj\x86\Debug\OhioRawImport.exe
+C:\Users\David\Desktop\precinct_captains\VoterWatch\OhioRawImport\obj\x86\Debug\OhioRawImport.pdb

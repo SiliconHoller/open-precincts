@@ -1,0 +1,7 @@
+C:\Users\David\Desktop\precinct_captains\VoterWatch\hierarchies\bin\hierarchies.dll
+C:\Users\David\Desktop\precinct_captains\VoterWatch\hierarchies\bin\hierarchies.pdb
+C:\Users\David\Desktop\precinct_captains\VoterWatch\hierarchies\bin\VoterWatch.dll
+C:\Users\David\Desktop\precinct_captains\VoterWatch\hierarchies\bin\VoterWatch.pdb
+C:\Users\David\Desktop\precinct_captains\VoterWatch\hierarchies\obj\Debug\hierarchies.csprojResolveAssemblyReference.cache
+C:\Users\David\Desktop\precinct_captains\VoterWatch\hierarchies\obj\Debug\hierarchies.dll
+C:\Users\David\Desktop\precinct_captains\VoterWatch\hierarchies\obj\Debug\hierarchies.pdb

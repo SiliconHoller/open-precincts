@@ -1,0 +1,314 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="precinctModelStoreContainer" CdmEntityContainer="voterwatchEntities">
+    <EntitySetMapping Name="ohioraws">
+      <EntityTypeMapping TypeName="precinctModel.ohioraw">
+        <MappingFragment StoreEntitySet="ohioraw">
+          <ScalarProperty Name="countycourtdistrict" ColumnName="countycourtdistrict" />
+          <ScalarProperty Name="careercenter" ColumnName="careercenter" />
+          <ScalarProperty Name="resaddress1" ColumnName="resaddress1" />
+          <ScalarProperty Name="recordid" ColumnName="recordid" />
+          <ScalarProperty Name="importdate" ColumnName="importdate" />
+          <ScalarProperty Name="importidentifier" ColumnName="importidentifier" />
+          <ScalarProperty Name="sosvoterid" ColumnName="sosvoterid" />
+          <ScalarProperty Name="countynumber" ColumnName="countynumber" />
+          <ScalarProperty Name="countyid" ColumnName="countyid" />
+          <ScalarProperty Name="lastname" ColumnName="lastname" />
+          <ScalarProperty Name="firstname" ColumnName="firstname" />
+          <ScalarProperty Name="middlename" ColumnName="middlename" />
+          <ScalarProperty Name="suffix" ColumnName="suffix" />
+          <ScalarProperty Name="yearofbirth" ColumnName="yearofbirth" />
+          <ScalarProperty Name="registrationdate" ColumnName="registrationdate" />
+          <ScalarProperty Name="partyaffiliation" ColumnName="partyaffiliation" />
+          <ScalarProperty Name="resaddress2" ColumnName="resaddress2" />
+          <ScalarProperty Name="rescity" ColumnName="rescity" />
+          <ScalarProperty Name="resstate" ColumnName="resstate" />
+          <ScalarProperty Name="reszip" ColumnName="reszip" />
+          <ScalarProperty Name="reszipplusfour" ColumnName="reszipplusfour" />
+          <ScalarProperty Name="rescountry" ColumnName="rescountry" />
+          <ScalarProperty Name="respostalcode" ColumnName="respostalcode" />
+          <ScalarProperty Name="mailaddress1" ColumnName="mailaddress1" />
+          <ScalarProperty Name="mailaddress2" ColumnName="mailaddress2" />
+          <ScalarProperty Name="mailcity" ColumnName="mailcity" />
+          <ScalarProperty Name="mailstate" ColumnName="mailstate" />
+          <ScalarProperty Name="mailzip" ColumnName="mailzip" />
+          <ScalarProperty Name="mailziplusfour" ColumnName="mailziplusfour" />
+          <ScalarProperty Name="mailcountry" ColumnName="mailcountry" />
+          <ScalarProperty Name="mailpostalcode" ColumnName="mailpostalcode" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="cityschooldistrict" ColumnName="cityschooldistrict" />
+          <ScalarProperty Name="congressionaldiscrict" ColumnName="congressionaldiscrict" />
+          <ScalarProperty Name="courtofappeals" ColumnName="courtofappeals" />
+          <ScalarProperty Name="educationservicecenter" ColumnName="educationservicecenter" />
+          <ScalarProperty Name="exemptedvillageschooldistrict" ColumnName="exemptedvillageschooldistrict" />
+          <ScalarProperty Name="librarydistrict" ColumnName="librarydistrict" />
+          <ScalarProperty Name="localschooldistrict" ColumnName="localschooldistrict" />
+          <ScalarProperty Name="municipalcourtdiscrict" ColumnName="municipalcourtdiscrict" />
+          <ScalarProperty Name="precinct" ColumnName="precinct" />
+          <ScalarProperty Name="precinctcode" ColumnName="precinctcode" />
+          <ScalarProperty Name="stateboardofeducation" ColumnName="stateboardofeducation" />
+          <ScalarProperty Name="staterepdistrict" ColumnName="staterepdistrict" />
+          <ScalarProperty Name="statesenatedistrict" ColumnName="statesenatedistrict" />
+          <ScalarProperty Name="township" ColumnName="township" />
+          <ScalarProperty Name="village" ColumnName="village" />
+          <ScalarProperty Name="ward" ColumnName="ward" />
+          <ScalarProperty Name="rawelectionlist" ColumnName="rawelectionlist" />
+          <ScalarProperty Name="rawvotingdata" ColumnName="rawvotingdata" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="addresses">
+      <EntityTypeMapping TypeName="precinctModel.address">
+        <MappingFragment StoreEntitySet="addresses">
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="modified_dt" ColumnName="modified_dt" />
+          <ScalarProperty Name="created_dt" ColumnName="created_dt" />
+          <ScalarProperty Name="zip_plusfour" ColumnName="zip_plusfour" />
+          <ScalarProperty Name="zip" ColumnName="zip" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="address2" ColumnName="address2" />
+          <ScalarProperty Name="address1" ColumnName="address1" />
+          <ScalarProperty Name="address_id" ColumnName="address_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="affiliations">
+      <EntityTypeMapping TypeName="precinctModel.affiliation">
+        <MappingFragment StoreEntitySet="affiliations">
+          <ScalarProperty Name="seq" ColumnName="seq" />
+          <ScalarProperty Name="descr" ColumnName="descr" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="partycode" ColumnName="partycode" />
+          <ScalarProperty Name="affiliationid" ColumnName="affiliationid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="district_types">
+      <EntityTypeMapping TypeName="precinctModel.district_types">
+        <MappingFragment StoreEntitySet="district_types">
+          <ScalarProperty Name="seq" ColumnName="seq" />
+          <ScalarProperty Name="descr" ColumnName="descr" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="districttypeid" ColumnName="districttypeid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="districts">
+      <EntityTypeMapping TypeName="precinctModel.district">
+        <MappingFragment StoreEntitySet="districts">
+          <ScalarProperty Name="descr" ColumnName="descr" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="identifier" ColumnName="identifier" />
+          <ScalarProperty Name="districttypeid" ColumnName="districttypeid" />
+          <ScalarProperty Name="districtid" ColumnName="districtid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="voter_addresses">
+      <EntityTypeMapping TypeName="precinctModel.voter_addresses">
+        <MappingFragment StoreEntitySet="voter_addresses">
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="modified_dt" ColumnName="modified_dt" />
+          <ScalarProperty Name="created_dt" ColumnName="created_dt" />
+          <ScalarProperty Name="address_flags" ColumnName="address_flags" />
+          <ScalarProperty Name="addressid" ColumnName="addressid" />
+          <ScalarProperty Name="voterid" ColumnName="voterid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="voter_districts">
+      <EntityTypeMapping TypeName="precinctModel.voter_districts">
+        <MappingFragment StoreEntitySet="voter_districts">
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="modified_dt" ColumnName="modified_dt" />
+          <ScalarProperty Name="created_dt" ColumnName="created_dt" />
+          <ScalarProperty Name="districtid" ColumnName="districtid" />
+          <ScalarProperty Name="voterid" ColumnName="voterid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="voters">
+      <EntityTypeMapping TypeName="precinctModel.voter">
+        <MappingFragment StoreEntitySet="voters">
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="modified_dt" ColumnName="modified_dt" />
+          <ScalarProperty Name="created_dt" ColumnName="created_dt" />
+          <ScalarProperty Name="partyaffiliation" ColumnName="partyaffiliation" />
+          <ScalarProperty Name="registrationdate" ColumnName="registrationdate" />
+          <ScalarProperty Name="yearofbirth" ColumnName="yearofbirth" />
+          <ScalarProperty Name="suffix" ColumnName="suffix" />
+          <ScalarProperty Name="middlename" ColumnName="middlename" />
+          <ScalarProperty Name="firstname" ColumnName="firstname" />
+          <ScalarProperty Name="lastname" ColumnName="lastname" />
+          <ScalarProperty Name="countyvoterid" ColumnName="countyvoterid" />
+          <ScalarProperty Name="statevoterid" ColumnName="statevoterid" />
+          <ScalarProperty Name="voterid" ColumnName="voterid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="roles">
+      <EntityTypeMapping TypeName="precinctModel.role">
+        <MappingFragment StoreEntitySet="roles">
+          <ScalarProperty Name="seq" ColumnName="seq" />
+          <ScalarProperty Name="descr" ColumnName="descr" />
+          <ScalarProperty Name="rolename" ColumnName="rolename" />
+          <ScalarProperty Name="roleid" ColumnName="roleid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="user_districts">
+      <EntityTypeMapping TypeName="precinctModel.user_districts">
+        <MappingFragment StoreEntitySet="user_districts">
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="modified_dt" ColumnName="modified_dt" />
+          <ScalarProperty Name="created_dt" ColumnName="created_dt" />
+          <ScalarProperty Name="districtid" ColumnName="districtid" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="district_relationships">
+      <EntityTypeMapping TypeName="precinctModel.district_relationships">
+        <MappingFragment StoreEntitySet="district_relationships">
+          <ScalarProperty Name="descr" ColumnName="descr" />
+          <ScalarProperty Name="parentdistrict" ColumnName="parentdistrict" />
+          <ScalarProperty Name="districtid" ColumnName="districtid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tallies">
+      <EntityTypeMapping TypeName="precinctModel.tally">
+        <MappingFragment StoreEntitySet="tally">
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="modified_dt" ColumnName="modified_dt" />
+          <ScalarProperty Name="created_dt" ColumnName="created_dt" />
+          <ScalarProperty Name="event_end" ColumnName="event_end" />
+          <ScalarProperty Name="event_start" ColumnName="event_start" />
+          <ScalarProperty Name="descr" ColumnName="descr" />
+          <ScalarProperty Name="ttype_id" ColumnName="ttype_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="tally_id" ColumnName="tally_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tally_type">
+      <EntityTypeMapping TypeName="precinctModel.tally_type">
+        <MappingFragment StoreEntitySet="tally_type">
+          <ScalarProperty Name="seq" ColumnName="seq" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="modified_dt" ColumnName="modified_dt" />
+          <ScalarProperty Name="created_dt" ColumnName="created_dt" />
+          <ScalarProperty Name="descr" ColumnName="descr" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="ttype_id" ColumnName="ttype_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="voter_count">
+      <EntityTypeMapping TypeName="precinctModel.voter_count">
+        <MappingFragment StoreEntitySet="voter_count">
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="modified_dt" ColumnName="modified_dt" />
+          <ScalarProperty Name="created_dt" ColumnName="created_dt" />
+          <ScalarProperty Name="methodid" ColumnName="methodid" />
+          <ScalarProperty Name="voterid" ColumnName="voterid" />
+          <ScalarProperty Name="tally_id" ColumnName="tally_id" />
+          <ScalarProperty Name="count_id" ColumnName="count_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="voter_method">
+      <EntityTypeMapping TypeName="precinctModel.voter_method">
+        <MappingFragment StoreEntitySet="voter_method">
+          <ScalarProperty Name="seq" ColumnName="seq" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="modified_dt" ColumnName="modified_dt" />
+          <ScalarProperty Name="created_dt" ColumnName="created_dt" />
+          <ScalarProperty Name="descr" ColumnName="descr" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="vmid" ColumnName="vmid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="applications">
+      <EntityTypeMapping TypeName="precinctModel.application">
+        <MappingFragment StoreEntitySet="applications">
+          <ScalarProperty Name="displayname" ColumnName="displayname" />
+          <ScalarProperty Name="descr" ColumnName="descr" />
+          <ScalarProperty Name="seq" ColumnName="seq" />
+          <ScalarProperty Name="appname" ColumnName="appname" />
+          <ScalarProperty Name="appid" ColumnName="appid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="errorlogs">
+      <EntityTypeMapping TypeName="precinctModel.errorlog">
+        <MappingFragment StoreEntitySet="errorlog">
+          <ScalarProperty Name="errargs" ColumnName="errargs" />
+          <ScalarProperty Name="errstacktrace" ColumnName="errstacktrace" />
+          <ScalarProperty Name="errmessage" ColumnName="errmessage" />
+          <ScalarProperty Name="errdepth" ColumnName="errdepth" />
+          <ScalarProperty Name="errmethod" ColumnName="errmethod" />
+          <ScalarProperty Name="errclass" ColumnName="errclass" />
+          <ScalarProperty Name="errdate" ColumnName="errdate" />
+          <ScalarProperty Name="errid" ColumnName="errid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="transactionlogs">
+      <EntityTypeMapping TypeName="precinctModel.transactionlog">
+        <MappingFragment StoreEntitySet="transactionlog">
+          <ScalarProperty Name="txargs" ColumnName="txargs" />
+          <ScalarProperty Name="txentry" ColumnName="txentry" />
+          <ScalarProperty Name="txcomplete" ColumnName="txcomplete" />
+          <ScalarProperty Name="txstep" ColumnName="txstep" />
+          <ScalarProperty Name="txset" ColumnName="txset" />
+          <ScalarProperty Name="txclass" ColumnName="txclass" />
+          <ScalarProperty Name="txid" ColumnName="txid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="app_user_roles">
+      <EntityTypeMapping TypeName="precinctModel.app_user_roles">
+        <MappingFragment StoreEntitySet="app_user_roles">
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="modified_dt" ColumnName="modified_dt" />
+          <ScalarProperty Name="created_dt" ColumnName="created_dt" />
+          <ScalarProperty Name="roleid" ColumnName="roleid" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+          <ScalarProperty Name="appid" ColumnName="appid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="precinctModel.user">
+        <MappingFragment StoreEntitySet="users">
+          <ScalarProperty Name="descr" ColumnName="descr" />
+          <ScalarProperty Name="userpass" ColumnName="userpass" />
+          <ScalarProperty Name="usersalt" ColumnName="usersalt" />
+          <ScalarProperty Name="emailaddress" ColumnName="emailaddress" />
+          <ScalarProperty Name="lastname" ColumnName="lastname" />
+          <ScalarProperty Name="firstname" ColumnName="firstname" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="user_apps">
+      <EntityTypeMapping TypeName="precinctModel.user_apps">
+        <MappingFragment StoreEntitySet="user_apps">
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="created_dt" ColumnName="created_dt" />
+          <ScalarProperty Name="appid" ColumnName="appid" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+          <ScalarProperty Name="userappid" ColumnName="userappid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="votercounts" FunctionName="precinctModel.Store.votercounts">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="precinctModel.votercounts_Result" />
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

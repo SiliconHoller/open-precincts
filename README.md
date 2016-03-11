@@ -13,3 +13,13 @@ There are several basic goals to this project.  First, the end result should be 
 Second, the functionality of the system should be centered around making it easier for the Precinct Captain (or equivalent) to work an election as independently as necessary, rather than tying an organization to a particular vendor, setup, or concept of implementation.  GOTV organizations (neutral or aligned with a candidate), ballot issue proponents, and small "insurgent" campaigns should be able to get reasonable performance and metrics out of the software--how well they use that information is up to them.
 
 Finally, migration and coordination between campaigns should be "stackable and transferable".  In essence, individual organizations should be able to share data as they see fit (between other instances of Open Precincts), as well as go their separate ways if that decision is made.  Not all voting-oriented organizations see eye-to-eye on every election cycle, so the choice of sharing information should not be equivalent to wholesale surrender of independence for the future.
+
+# Folder Layout
+
+The project layout is as follows:
+
+- data: These are the source data files, such as voter data, congressional shape files, and other supporting data that might prove useful
+- db:  Database scripts, procedures, etc.  The current implementation (from .Net legacy code) is MySQL--this may change or expand as the project moves forward.
+- doc:  Design documents, API (when the get created), help files, etc.
+- src:  Primary source folder.  At the moment, the legacy .Net implementation is there as a matter of reference.
+

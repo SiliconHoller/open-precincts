@@ -1,0 +1,17 @@
+C:\Users\David\Desktop\precinct_captains\VoterWatch\precinctcaptain\bin\precinctcaptain.dll
+C:\Users\David\Desktop\precinct_captains\VoterWatch\precinctcaptain\bin\precinctcaptain.pdb
+C:\Users\David\Desktop\precinct_captains\VoterWatch\precinctcaptain\bin\hierarchies.dll
+C:\Users\David\Desktop\precinct_captains\VoterWatch\precinctcaptain\bin\searchFields.dll
+C:\Users\David\Desktop\precinct_captains\VoterWatch\precinctcaptain\bin\systemlists.dll
+C:\Users\David\Desktop\precinct_captains\VoterWatch\precinctcaptain\bin\tallies.dll
+C:\Users\David\Desktop\precinct_captains\VoterWatch\precinctcaptain\bin\voterdata.dll
+C:\Users\David\Desktop\precinct_captains\VoterWatch\precinctcaptain\bin\VoterWatch.dll
+C:\Users\David\Desktop\precinct_captains\VoterWatch\precinctcaptain\bin\hierarchies.pdb
+C:\Users\David\Desktop\precinct_captains\VoterWatch\precinctcaptain\bin\searchFields.pdb
+C:\Users\David\Desktop\precinct_captains\VoterWatch\precinctcaptain\bin\systemlists.pdb
+C:\Users\David\Desktop\precinct_captains\VoterWatch\precinctcaptain\bin\tallies.pdb
+C:\Users\David\Desktop\precinct_captains\VoterWatch\precinctcaptain\bin\voterdata.pdb
+C:\Users\David\Desktop\precinct_captains\VoterWatch\precinctcaptain\bin\VoterWatch.pdb
+C:\Users\David\Desktop\precinct_captains\VoterWatch\precinctcaptain\obj\Release\precinctcaptain.csprojResolveAssemblyReference.cache
+C:\Users\David\Desktop\precinct_captains\VoterWatch\precinctcaptain\obj\Release\precinctcaptain.dll
+C:\Users\David\Desktop\precinct_captains\VoterWatch\precinctcaptain\obj\Release\precinctcaptain.pdb

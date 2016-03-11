@@ -1,0 +1,621 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="precinctModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.6" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="precinctModelStoreContainer">
+    <EntitySet Name="addresses" EntityType="precinctModel.Store.addresses" store:Type="Tables" Schema="voterwatch" />
+    <EntitySet Name="affiliations" EntityType="precinctModel.Store.affiliations" store:Type="Tables" Schema="voterwatch" />
+    <EntitySet Name="app_user_roles" EntityType="precinctModel.Store.app_user_roles" store:Type="Tables" Schema="voterwatch" />
+    <EntitySet Name="applications" EntityType="precinctModel.Store.applications" store:Type="Tables" Schema="voterwatch" />
+    <EntitySet Name="district_relationships" EntityType="precinctModel.Store.district_relationships" store:Type="Tables" Schema="voterwatch" />
+    <EntitySet Name="district_types" EntityType="precinctModel.Store.district_types" store:Type="Tables" Schema="voterwatch" />
+    <EntitySet Name="districts" EntityType="precinctModel.Store.districts" store:Type="Tables" Schema="voterwatch" />
+    <EntitySet Name="errorlog" EntityType="precinctModel.Store.errorlog" store:Type="Tables" Schema="voterwatch" />
+    <EntitySet Name="ohioraw" EntityType="precinctModel.Store.ohioraw" store:Type="Tables" Schema="voterwatch" />
+    <EntitySet Name="roles" EntityType="precinctModel.Store.roles" store:Type="Tables" Schema="voterwatch" />
+    <EntitySet Name="tally" EntityType="precinctModel.Store.tally" store:Type="Tables" Schema="voterwatch" />
+    <EntitySet Name="tally_type" EntityType="precinctModel.Store.tally_type" store:Type="Tables" Schema="voterwatch" />
+    <EntitySet Name="transactionlog" EntityType="precinctModel.Store.transactionlog" store:Type="Tables" Schema="voterwatch" />
+    <EntitySet Name="user_apps" EntityType="precinctModel.Store.user_apps" store:Type="Tables" Schema="voterwatch" />
+    <EntitySet Name="user_districts" EntityType="precinctModel.Store.user_districts" store:Type="Tables" Schema="voterwatch" />
+    <EntitySet Name="users" EntityType="precinctModel.Store.users" store:Type="Tables" Schema="voterwatch" />
+    <EntitySet Name="voter_addresses" EntityType="precinctModel.Store.voter_addresses" store:Type="Tables" Schema="voterwatch" />
+    <EntitySet Name="voter_count" EntityType="precinctModel.Store.voter_count" store:Type="Tables" Schema="voterwatch" />
+    <EntitySet Name="voter_districts" EntityType="precinctModel.Store.voter_districts" store:Type="Tables" Schema="voterwatch" />
+    <EntitySet Name="voter_method" EntityType="precinctModel.Store.voter_method" store:Type="Tables" Schema="voterwatch" />
+    <EntitySet Name="voters" EntityType="precinctModel.Store.voters" store:Type="Tables" Schema="voterwatch" />
+    <AssociationSet Name="fk_address_address" Association="precinctModel.Store.fk_address_address">
+      <End Role="addresses" EntitySet="addresses" />
+      <End Role="voter_addresses" EntitySet="voter_addresses" />
+    </AssociationSet>
+    <AssociationSet Name="fk_address_voter" Association="precinctModel.Store.fk_address_voter">
+      <End Role="voters" EntitySet="voters" />
+      <End Role="voter_addresses" EntitySet="voter_addresses" />
+    </AssociationSet>
+    <AssociationSet Name="fk_affiliation" Association="precinctModel.Store.fk_affiliation">
+      <End Role="affiliations" EntitySet="affiliations" />
+      <End Role="voters" EntitySet="voters" />
+    </AssociationSet>
+    <AssociationSet Name="fk_aur_app" Association="precinctModel.Store.fk_aur_app">
+      <End Role="applications" EntitySet="applications" />
+      <End Role="app_user_roles" EntitySet="app_user_roles" />
+    </AssociationSet>
+    <AssociationSet Name="fk_aur_role" Association="precinctModel.Store.fk_aur_role">
+      <End Role="roles" EntitySet="roles" />
+      <End Role="app_user_roles" EntitySet="app_user_roles" />
+    </AssociationSet>
+    <AssociationSet Name="fk_aur_user" Association="precinctModel.Store.fk_aur_user">
+      <End Role="users" EntitySet="users" />
+      <End Role="app_user_roles" EntitySet="app_user_roles" />
+    </AssociationSet>
+    <AssociationSet Name="fk_district" Association="precinctModel.Store.fk_district">
+      <End Role="districts" EntitySet="districts" />
+      <End Role="district_relationships" EntitySet="district_relationships" />
+    </AssociationSet>
+    <AssociationSet Name="fk_district_type" Association="precinctModel.Store.fk_district_type">
+      <End Role="district_types" EntitySet="district_types" />
+      <End Role="districts" EntitySet="districts" />
+    </AssociationSet>
+    <AssociationSet Name="fk_district_user" Association="precinctModel.Store.fk_district_user">
+      <End Role="users" EntitySet="users" />
+      <End Role="user_districts" EntitySet="user_districts" />
+    </AssociationSet>
+    <AssociationSet Name="fk_parent" Association="precinctModel.Store.fk_parent">
+      <End Role="districts" EntitySet="districts" />
+      <End Role="district_relationships" EntitySet="district_relationships" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tally_type" Association="precinctModel.Store.FK_tally_type">
+      <End Role="tally_type" EntitySet="tally_type" />
+      <End Role="tally" EntitySet="tally" />
+    </AssociationSet>
+    <AssociationSet Name="fk_user_district" Association="precinctModel.Store.fk_user_district">
+      <End Role="districts" EntitySet="districts" />
+      <End Role="user_districts" EntitySet="user_districts" />
+    </AssociationSet>
+    <AssociationSet Name="fk_userapp_app" Association="precinctModel.Store.fk_userapp_app">
+      <End Role="applications" EntitySet="applications" />
+      <End Role="user_apps" EntitySet="user_apps" />
+    </AssociationSet>
+    <AssociationSet Name="fk_userapp_user" Association="precinctModel.Store.fk_userapp_user">
+      <End Role="users" EntitySet="users" />
+      <End Role="user_apps" EntitySet="user_apps" />
+    </AssociationSet>
+    <AssociationSet Name="fk_vd_district" Association="precinctModel.Store.fk_vd_district">
+      <End Role="districts" EntitySet="districts" />
+      <End Role="voter_districts" EntitySet="voter_districts" />
+    </AssociationSet>
+    <AssociationSet Name="fk_vd_voter" Association="precinctModel.Store.fk_vd_voter">
+      <End Role="voters" EntitySet="voters" />
+      <End Role="voter_districts" EntitySet="voter_districts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_voter_method" Association="precinctModel.Store.FK_voter_method">
+      <End Role="voter_method" EntitySet="voter_method" />
+      <End Role="voter_count" EntitySet="voter_count" />
+    </AssociationSet>
+    <AssociationSet Name="FK_voter_tally" Association="precinctModel.Store.FK_voter_tally">
+      <End Role="tally" EntitySet="tally" />
+      <End Role="voter_count" EntitySet="voter_count" />
+    </AssociationSet>
+    <AssociationSet Name="FK_voter_voter" Association="precinctModel.Store.FK_voter_voter">
+      <End Role="voters" EntitySet="voters" />
+      <End Role="voter_count" EntitySet="voter_count" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="addresses">
+    <Key>
+      <PropertyRef Name="address_id" />
+    </Key>
+    <Property Name="address_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="address1" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="address2" Type="varchar" MaxLength="100" />
+    <Property Name="city" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="state" Type="varchar" Nullable="false" MaxLength="2" />
+    <Property Name="zip" Type="varchar" Nullable="false" MaxLength="5" />
+    <Property Name="zip_plusfour" Type="varchar" MaxLength="4" />
+    <Property Name="created_dt" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="modified_dt" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="modified_by" Type="varchar" MaxLength="45" />
+  </EntityType>
+  <EntityType Name="affiliations">
+    <Key>
+      <PropertyRef Name="affiliationid" />
+    </Key>
+    <Property Name="affiliationid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="partycode" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="name" Type="varchar" Nullable="false" MaxLength="45" />
+    <Property Name="seq" Type="int" Nullable="false" />
+    <Property Name="descr" Type="mediumtext" />
+  </EntityType>
+  <EntityType Name="app_user_roles">
+    <Key>
+      <PropertyRef Name="appid" />
+      <PropertyRef Name="userid" />
+      <PropertyRef Name="roleid" />
+    </Key>
+    <Property Name="appid" Type="int" Nullable="false" />
+    <Property Name="userid" Type="int" Nullable="false" />
+    <Property Name="roleid" Type="int" Nullable="false" />
+    <Property Name="created_dt" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="modified_dt" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="modified_by" Type="varchar" MaxLength="45" />
+  </EntityType>
+  <EntityType Name="applications">
+    <Key>
+      <PropertyRef Name="appid" />
+    </Key>
+    <Property Name="appid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="displayname" Type="varchar" Nullable="false" MaxLength="45" />
+    <Property Name="appname" Type="varchar" Nullable="false" MaxLength="45" />
+    <Property Name="seq" Type="int" Nullable="false" />
+    <Property Name="descr" Type="mediumtext" />
+  </EntityType>
+  <EntityType Name="district_relationships">
+    <Key>
+      <PropertyRef Name="districtid" />
+      <PropertyRef Name="parentdistrict" />
+    </Key>
+    <Property Name="districtid" Type="int" Nullable="false" />
+    <Property Name="parentdistrict" Type="int" Nullable="false" />
+    <Property Name="descr" Type="varchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="district_types">
+    <Key>
+      <PropertyRef Name="districttypeid" />
+    </Key>
+    <Property Name="districttypeid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="varchar" Nullable="false" MaxLength="45" />
+    <Property Name="seq" Type="int" Nullable="false" />
+    <Property Name="descr" Type="mediumtext" />
+  </EntityType>
+  <EntityType Name="districts">
+    <Key>
+      <PropertyRef Name="districtid" />
+    </Key>
+    <Property Name="districtid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="districttypeid" Type="int" Nullable="false" />
+    <Property Name="identifier" Type="varchar" Nullable="false" MaxLength="80" />
+    <Property Name="name" Type="varchar" MaxLength="80" />
+    <Property Name="descr" Type="mediumtext" />
+  </EntityType>
+  <EntityType Name="errorlog">
+    <Key>
+      <PropertyRef Name="errid" />
+    </Key>
+    <Property Name="errid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="errdate" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="errclass" Type="varchar" Nullable="false" MaxLength="256" />
+    <Property Name="errmethod" Type="varchar" Nullable="false" MaxLength="45" />
+    <Property Name="errdepth" Type="int" Nullable="false" />
+    <Property Name="errmessage" Type="varchar" Nullable="false" MaxLength="1024" />
+    <Property Name="errstacktrace" Type="mediumtext" Nullable="false" />
+    <Property Name="errargs" Type="mediumtext" />
+  </EntityType>
+  <EntityType Name="ohioraw">
+    <Key>
+      <PropertyRef Name="recordid" />
+    </Key>
+    <Property Name="recordid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="importdate" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="importidentifier" Type="varchar" Nullable="false" MaxLength="45" />
+    <Property Name="sosvoterid" Type="varchar" MaxLength="13" />
+    <Property Name="countynumber" Type="varchar" MaxLength="2" />
+    <Property Name="countyid" Type="varchar" MaxLength="50" />
+    <Property Name="lastname" Type="varchar" MaxLength="50" />
+    <Property Name="firstname" Type="varchar" MaxLength="50" />
+    <Property Name="middlename" Type="varchar" MaxLength="50" />
+    <Property Name="suffix" Type="varchar" MaxLength="10" />
+    <Property Name="yearofbirth" Type="varchar" MaxLength="10" />
+    <Property Name="registrationdate" Type="varchar" MaxLength="10" />
+    <Property Name="partyaffiliation" Type="varchar" MaxLength="1" />
+    <Property Name="resaddress1" Type="varchar" MaxLength="100" />
+    <Property Name="resaddress2" Type="varchar" MaxLength="100" />
+    <Property Name="rescity" Type="varchar" MaxLength="50" />
+    <Property Name="resstate" Type="varchar" MaxLength="20" />
+    <Property Name="reszip" Type="varchar" MaxLength="5" />
+    <Property Name="reszipplusfour" Type="varchar" MaxLength="4" />
+    <Property Name="rescountry" Type="varchar" MaxLength="50" />
+    <Property Name="respostalcode" Type="varchar" MaxLength="10" />
+    <Property Name="mailaddress1" Type="varchar" MaxLength="100" />
+    <Property Name="mailaddress2" Type="varchar" MaxLength="100" />
+    <Property Name="mailcity" Type="varchar" MaxLength="50" />
+    <Property Name="mailstate" Type="varchar" MaxLength="20" />
+    <Property Name="mailzip" Type="varchar" MaxLength="5" />
+    <Property Name="mailziplusfour" Type="varchar" MaxLength="4" />
+    <Property Name="mailcountry" Type="varchar" MaxLength="50" />
+    <Property Name="mailpostalcode" Type="varchar" MaxLength="10" />
+    <Property Name="careercenter" Type="varchar" MaxLength="80" />
+    <Property Name="city" Type="varchar" MaxLength="80" />
+    <Property Name="cityschooldistrict" Type="varchar" MaxLength="80" />
+    <Property Name="countycourtdistrict" Type="varchar" MaxLength="80" />
+    <Property Name="congressionaldiscrict" Type="varchar" MaxLength="2" />
+    <Property Name="courtofappeals" Type="varchar" MaxLength="2" />
+    <Property Name="educationservicecenter" Type="varchar" MaxLength="80" />
+    <Property Name="exemptedvillageschooldistrict" Type="varchar" MaxLength="80" />
+    <Property Name="librarydistrict" Type="varchar" MaxLength="80" />
+    <Property Name="localschooldistrict" Type="varchar" MaxLength="80" />
+    <Property Name="municipalcourtdiscrict" Type="varchar" MaxLength="80" />
+    <Property Name="precinct" Type="varchar" MaxLength="80" />
+    <Property Name="precinctcode" Type="varchar" MaxLength="40" />
+    <Property Name="stateboardofeducation" Type="varchar" MaxLength="2" />
+    <Property Name="staterepdistrict" Type="varchar" MaxLength="2" />
+    <Property Name="statesenatedistrict" Type="varchar" MaxLength="2" />
+    <Property Name="township" Type="varchar" MaxLength="40" />
+    <Property Name="village" Type="varchar" MaxLength="40" />
+    <Property Name="ward" Type="varchar" MaxLength="40" />
+    <Property Name="rawelectionlist" Type="longtext" />
+    <Property Name="rawvotingdata" Type="longtext" />
+  </EntityType>
+  <EntityType Name="roles">
+    <Key>
+      <PropertyRef Name="roleid" />
+    </Key>
+    <Property Name="roleid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="rolename" Type="varchar" Nullable="false" MaxLength="45" />
+    <Property Name="seq" Type="int" Nullable="false" />
+    <Property Name="descr" Type="mediumtext" />
+  </EntityType>
+  <EntityType Name="tally">
+    <Key>
+      <PropertyRef Name="tally_id" />
+    </Key>
+    <Property Name="tally_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="varchar" Nullable="false" MaxLength="128" />
+    <Property Name="ttype_id" Type="int" Nullable="false" />
+    <Property Name="descr" Type="mediumtext" />
+    <Property Name="event_start" Type="date" />
+    <Property Name="event_end" Type="date" />
+    <Property Name="created_dt" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="modified_dt" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="modified_by" Type="varchar" MaxLength="45" />
+  </EntityType>
+  <EntityType Name="tally_type">
+    <Key>
+      <PropertyRef Name="ttype_id" />
+    </Key>
+    <Property Name="ttype_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="varchar" Nullable="false" MaxLength="64" />
+    <Property Name="seq" Type="int" Nullable="false" />
+    <Property Name="descr" Type="mediumtext" />
+    <Property Name="created_dt" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="modified_dt" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="modified_by" Type="varchar" MaxLength="45" />
+  </EntityType>
+  <EntityType Name="transactionlog">
+    <Key>
+      <PropertyRef Name="txid" />
+    </Key>
+    <Property Name="txid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="txclass" Type="varchar" Nullable="false" MaxLength="128" />
+    <Property Name="txset" Type="varchar" Nullable="false" MaxLength="64" />
+    <Property Name="txstep" Type="varchar" Nullable="false" MaxLength="64" />
+    <Property Name="txcomplete" Type="bit" Nullable="false" />
+    <Property Name="txentry" Type="mediumtext" />
+    <Property Name="txargs" Type="mediumtext" />
+  </EntityType>
+  <EntityType Name="user_apps">
+    <Key>
+      <PropertyRef Name="userappid" />
+    </Key>
+    <Property Name="userappid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="userid" Type="int" Nullable="false" />
+    <Property Name="appid" Type="int" Nullable="false" />
+    <Property Name="created_dt" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="created_by" Type="varchar" MaxLength="45" />
+  </EntityType>
+  <EntityType Name="user_districts">
+    <Key>
+      <PropertyRef Name="userid" />
+      <PropertyRef Name="districtid" />
+    </Key>
+    <Property Name="userid" Type="int" Nullable="false" />
+    <Property Name="districtid" Type="int" Nullable="false" />
+    <Property Name="created_dt" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="modified_dt" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="modified_by" Type="varchar" MaxLength="45" />
+  </EntityType>
+  <EntityType Name="users">
+    <Key>
+      <PropertyRef Name="userid" />
+    </Key>
+    <Property Name="userid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="firstname" Type="varchar" Nullable="false" MaxLength="45" />
+    <Property Name="lastname" Type="varchar" Nullable="false" MaxLength="45" />
+    <Property Name="emailaddress" Type="varchar" Nullable="false" MaxLength="45" />
+    <Property Name="usersalt" Type="blob" />
+    <Property Name="userpass" Type="blob" />
+    <Property Name="descr" Type="mediumtext" />
+  </EntityType>
+  <EntityType Name="voter_addresses">
+    <Key>
+      <PropertyRef Name="voterid" />
+      <PropertyRef Name="addressid" />
+    </Key>
+    <Property Name="voterid" Type="int" Nullable="false" />
+    <Property Name="addressid" Type="int" Nullable="false" />
+    <Property Name="address_flags" Type="int" Nullable="false" />
+    <Property Name="created_dt" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="modified_dt" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="modified_by" Type="varchar" MaxLength="45" />
+  </EntityType>
+  <EntityType Name="voter_count">
+    <Key>
+      <PropertyRef Name="count_id" />
+    </Key>
+    <Property Name="count_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="tally_id" Type="int" Nullable="false" />
+    <Property Name="voterid" Type="int" Nullable="false" />
+    <Property Name="methodid" Type="int" Nullable="false" />
+    <Property Name="created_dt" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="modified_dt" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="modified_by" Type="varchar" MaxLength="45" />
+  </EntityType>
+  <EntityType Name="voter_districts">
+    <Key>
+      <PropertyRef Name="voterid" />
+      <PropertyRef Name="districtid" />
+    </Key>
+    <Property Name="voterid" Type="int" Nullable="false" />
+    <Property Name="districtid" Type="int" Nullable="false" />
+    <Property Name="created_dt" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="modified_dt" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="modified_by" Type="varchar" MaxLength="45" />
+  </EntityType>
+  <EntityType Name="voter_method">
+    <Key>
+      <PropertyRef Name="vmid" />
+    </Key>
+    <Property Name="vmid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="varchar" Nullable="false" MaxLength="45" />
+    <Property Name="seq" Type="int" Nullable="false" />
+    <Property Name="descr" Type="mediumtext" />
+    <Property Name="created_dt" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="modified_dt" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="modified_by" Type="varchar" MaxLength="45" />
+  </EntityType>
+  <EntityType Name="voters">
+    <Key>
+      <PropertyRef Name="voterid" />
+    </Key>
+    <Property Name="voterid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="statevoterid" Type="varchar" MaxLength="45" />
+    <Property Name="countyvoterid" Type="varchar" MaxLength="45" />
+    <Property Name="lastname" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="firstname" Type="varchar" Nullable="false" MaxLength="45" />
+    <Property Name="middlename" Type="varchar" MaxLength="45" />
+    <Property Name="suffix" Type="varchar" MaxLength="20" />
+    <Property Name="yearofbirth" Type="int" Nullable="false" />
+    <Property Name="registrationdate" Type="datetime" Nullable="false" />
+    <Property Name="partyaffiliation" Type="int" />
+    <Property Name="created_dt" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="modified_dt" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="modified_by" Type="varchar" MaxLength="45" />
+  </EntityType>
+  <Association Name="fk_address_address">
+    <End Role="addresses" Type="precinctModel.Store.addresses" Multiplicity="1" />
+    <End Role="voter_addresses" Type="precinctModel.Store.voter_addresses" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="addresses">
+        <PropertyRef Name="address_id" />
+      </Principal>
+      <Dependent Role="voter_addresses">
+        <PropertyRef Name="addressid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_address_voter">
+    <End Role="voters" Type="precinctModel.Store.voters" Multiplicity="1" />
+    <End Role="voter_addresses" Type="precinctModel.Store.voter_addresses" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="voters">
+        <PropertyRef Name="voterid" />
+      </Principal>
+      <Dependent Role="voter_addresses">
+        <PropertyRef Name="voterid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_affiliation">
+    <End Role="affiliations" Type="precinctModel.Store.affiliations" Multiplicity="0..1" />
+    <End Role="voters" Type="precinctModel.Store.voters" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="affiliations">
+        <PropertyRef Name="affiliationid" />
+      </Principal>
+      <Dependent Role="voters">
+        <PropertyRef Name="partyaffiliation" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_aur_app">
+    <End Role="applications" Type="precinctModel.Store.applications" Multiplicity="1" />
+    <End Role="app_user_roles" Type="precinctModel.Store.app_user_roles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="applications">
+        <PropertyRef Name="appid" />
+      </Principal>
+      <Dependent Role="app_user_roles">
+        <PropertyRef Name="appid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_aur_role">
+    <End Role="roles" Type="precinctModel.Store.roles" Multiplicity="1" />
+    <End Role="app_user_roles" Type="precinctModel.Store.app_user_roles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="roles">
+        <PropertyRef Name="roleid" />
+      </Principal>
+      <Dependent Role="app_user_roles">
+        <PropertyRef Name="roleid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_aur_user">
+    <End Role="users" Type="precinctModel.Store.users" Multiplicity="1" />
+    <End Role="app_user_roles" Type="precinctModel.Store.app_user_roles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="userid" />
+      </Principal>
+      <Dependent Role="app_user_roles">
+        <PropertyRef Name="userid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_district">
+    <End Role="districts" Type="precinctModel.Store.districts" Multiplicity="1" />
+    <End Role="district_relationships" Type="precinctModel.Store.district_relationships" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="districts">
+        <PropertyRef Name="districtid" />
+      </Principal>
+      <Dependent Role="district_relationships">
+        <PropertyRef Name="districtid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_district_type">
+    <End Role="district_types" Type="precinctModel.Store.district_types" Multiplicity="1" />
+    <End Role="districts" Type="precinctModel.Store.districts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="district_types">
+        <PropertyRef Name="districttypeid" />
+      </Principal>
+      <Dependent Role="districts">
+        <PropertyRef Name="districttypeid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_district_user">
+    <End Role="users" Type="precinctModel.Store.users" Multiplicity="1" />
+    <End Role="user_districts" Type="precinctModel.Store.user_districts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="userid" />
+      </Principal>
+      <Dependent Role="user_districts">
+        <PropertyRef Name="userid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_parent">
+    <End Role="districts" Type="precinctModel.Store.districts" Multiplicity="1" />
+    <End Role="district_relationships" Type="precinctModel.Store.district_relationships" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="districts">
+        <PropertyRef Name="districtid" />
+      </Principal>
+      <Dependent Role="district_relationships">
+        <PropertyRef Name="parentdistrict" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tally_type">
+    <End Role="tally_type" Type="precinctModel.Store.tally_type" Multiplicity="1" />
+    <End Role="tally" Type="precinctModel.Store.tally" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tally_type">
+        <PropertyRef Name="ttype_id" />
+      </Principal>
+      <Dependent Role="tally">
+        <PropertyRef Name="ttype_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_user_district">
+    <End Role="districts" Type="precinctModel.Store.districts" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="user_districts" Type="precinctModel.Store.user_districts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="districts">
+        <PropertyRef Name="districtid" />
+      </Principal>
+      <Dependent Role="user_districts">
+        <PropertyRef Name="districtid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_userapp_app">
+    <End Role="applications" Type="precinctModel.Store.applications" Multiplicity="1" />
+    <End Role="user_apps" Type="precinctModel.Store.user_apps" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="applications">
+        <PropertyRef Name="appid" />
+      </Principal>
+      <Dependent Role="user_apps">
+        <PropertyRef Name="appid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_userapp_user">
+    <End Role="users" Type="precinctModel.Store.users" Multiplicity="1" />
+    <End Role="user_apps" Type="precinctModel.Store.user_apps" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="userid" />
+      </Principal>
+      <Dependent Role="user_apps">
+        <PropertyRef Name="userid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_vd_district">
+    <End Role="districts" Type="precinctModel.Store.districts" Multiplicity="1" />
+    <End Role="voter_districts" Type="precinctModel.Store.voter_districts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="districts">
+        <PropertyRef Name="districtid" />
+      </Principal>
+      <Dependent Role="voter_districts">
+        <PropertyRef Name="districtid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_vd_voter">
+    <End Role="voters" Type="precinctModel.Store.voters" Multiplicity="1" />
+    <End Role="voter_districts" Type="precinctModel.Store.voter_districts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="voters">
+        <PropertyRef Name="voterid" />
+      </Principal>
+      <Dependent Role="voter_districts">
+        <PropertyRef Name="voterid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_voter_method">
+    <End Role="voter_method" Type="precinctModel.Store.voter_method" Multiplicity="1" />
+    <End Role="voter_count" Type="precinctModel.Store.voter_count" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="voter_method">
+        <PropertyRef Name="vmid" />
+      </Principal>
+      <Dependent Role="voter_count">
+        <PropertyRef Name="methodid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_voter_tally">
+    <End Role="tally" Type="precinctModel.Store.tally" Multiplicity="1" />
+    <End Role="voter_count" Type="precinctModel.Store.voter_count" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tally">
+        <PropertyRef Name="tally_id" />
+      </Principal>
+      <Dependent Role="voter_count">
+        <PropertyRef Name="tally_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_voter_voter">
+    <End Role="voters" Type="precinctModel.Store.voters" Multiplicity="1" />
+    <End Role="voter_count" Type="precinctModel.Store.voter_count" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="voters">
+        <PropertyRef Name="voterid" />
+      </Principal>
+      <Dependent Role="voter_count">
+        <PropertyRef Name="voterid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

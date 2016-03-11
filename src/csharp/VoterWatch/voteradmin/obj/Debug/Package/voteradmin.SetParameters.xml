@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <setParameter name="IIS Web Application Name" value="Default Web Site/voteradmin" />
+  <setParameter name="voterwatchEntities-Web.config Connection String" value="metadata=res://*/Tracking.csdl|res://*/Tracking.ssdl|res://*/Tracking.msl;provider=MySql.Data.MySqlClient;provider connection string=&quot;server=localhost;User Id=root;password=Vmaaw22%;Persist Security Info=True;database=voterwatch&quot;" />
+</parameters>

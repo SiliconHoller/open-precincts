@@ -1,0 +1,7 @@
+C:\Users\David\Desktop\precinct_captains\VoterWatch\tallies\bin\tallies.dll
+C:\Users\David\Desktop\precinct_captains\VoterWatch\tallies\bin\tallies.pdb
+C:\Users\David\Desktop\precinct_captains\VoterWatch\tallies\bin\VoterWatch.dll
+C:\Users\David\Desktop\precinct_captains\VoterWatch\tallies\bin\VoterWatch.pdb
+C:\Users\David\Desktop\precinct_captains\VoterWatch\tallies\obj\Release\tallies.dll
+C:\Users\David\Desktop\precinct_captains\VoterWatch\tallies\obj\Release\tallies.pdb
+C:\Users\David\Desktop\precinct_captains\VoterWatch\tallies\obj\Release\tallies.csprojResolveAssemblyReference.cache

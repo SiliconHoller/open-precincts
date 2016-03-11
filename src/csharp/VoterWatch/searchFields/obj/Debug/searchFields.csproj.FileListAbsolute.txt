@@ -1,0 +1,7 @@
+C:\Users\David\Desktop\precinct_captains\VoterWatch\searchFields\bin\searchFields.dll
+C:\Users\David\Desktop\precinct_captains\VoterWatch\searchFields\bin\searchFields.pdb
+C:\Users\David\Desktop\precinct_captains\VoterWatch\searchFields\bin\VoterWatch.dll
+C:\Users\David\Desktop\precinct_captains\VoterWatch\searchFields\bin\VoterWatch.pdb
+C:\Users\David\Desktop\precinct_captains\VoterWatch\searchFields\obj\Debug\searchFields.csprojResolveAssemblyReference.cache
+C:\Users\David\Desktop\precinct_captains\VoterWatch\searchFields\obj\Debug\searchFields.dll
+C:\Users\David\Desktop\precinct_captains\VoterWatch\searchFields\obj\Debug\searchFields.pdb

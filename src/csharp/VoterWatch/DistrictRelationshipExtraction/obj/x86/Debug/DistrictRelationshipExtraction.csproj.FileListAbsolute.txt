@@ -1,0 +1,9 @@
+C:\Users\David\Desktop\precinct_captains\VoterWatch\DistrictRelationshipExtraction\bin\Debug\DistrictRelationshipExtraction.exe.config
+C:\Users\David\Desktop\precinct_captains\VoterWatch\DistrictRelationshipExtraction\bin\Debug\DistrictRelationshipExtraction.exe
+C:\Users\David\Desktop\precinct_captains\VoterWatch\DistrictRelationshipExtraction\bin\Debug\DistrictRelationshipExtraction.pdb
+C:\Users\David\Desktop\precinct_captains\VoterWatch\DistrictRelationshipExtraction\bin\Debug\VoterWatch.dll
+C:\Users\David\Desktop\precinct_captains\VoterWatch\DistrictRelationshipExtraction\bin\Debug\VoterWatch.pdb
+C:\Users\David\Desktop\precinct_captains\VoterWatch\DistrictRelationshipExtraction\bin\Debug\VoterWatch.dll.config
+C:\Users\David\Desktop\precinct_captains\VoterWatch\DistrictRelationshipExtraction\obj\x86\Debug\DistrictRelationshipExtraction.csprojResolveAssemblyReference.cache
+C:\Users\David\Desktop\precinct_captains\VoterWatch\DistrictRelationshipExtraction\obj\x86\Debug\DistrictRelationshipExtraction.exe
+C:\Users\David\Desktop\precinct_captains\VoterWatch\DistrictRelationshipExtraction\obj\x86\Debug\DistrictRelationshipExtraction.pdb

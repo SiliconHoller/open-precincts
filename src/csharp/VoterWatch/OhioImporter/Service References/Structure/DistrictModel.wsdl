@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://siliconholler.net/geopolitical" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://siliconholler.net/geopolitical" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://siliconholler.net/geopolitical/Imports">
+      <xsd:import schemaLocation="http://localhost/precinctcaptain/mapadmin/DistrictModel.svc?xsd=xsd0" namespace="http://siliconholler.net/geopolitical" />
+      <xsd:import schemaLocation="http://localhost/precinctcaptain/mapadmin/DistrictModel.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost/precinctcaptain/mapadmin/DistrictModel.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IDistrictModel_addType_InputMessage">
+    <wsdl:part name="parameters" element="tns:addType" />
+  </wsdl:message>
+  <wsdl:message name="IDistrictModel_addType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDistrictModel_updateType_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateType" />
+  </wsdl:message>
+  <wsdl:message name="IDistrictModel_updateType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDistrictModel_addDistrict_InputMessage">
+    <wsdl:part name="parameters" element="tns:addDistrict" />
+  </wsdl:message>
+  <wsdl:message name="IDistrictModel_addDistrict_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addDistrictResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDistrictModel_updateDistrict_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateDistrict" />
+  </wsdl:message>
+  <wsdl:message name="IDistrictModel_updateDistrict_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateDistrictResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDistrictModel_deleteDistrict_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteDistrict" />
+  </wsdl:message>
+  <wsdl:message name="IDistrictModel_deleteDistrict_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteDistrictResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDistrictModel_addParent_InputMessage">
+    <wsdl:part name="parameters" element="tns:addParent" />
+  </wsdl:message>
+  <wsdl:message name="IDistrictModel_addParent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addParentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDistrictModel_removeParent_InputMessage">
+    <wsdl:part name="parameters" element="tns:removeParent" />
+  </wsdl:message>
+  <wsdl:message name="IDistrictModel_removeParent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:removeParentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDistrictModel_removeParents_InputMessage">
+    <wsdl:part name="parameters" element="tns:removeParents" />
+  </wsdl:message>
+  <wsdl:message name="IDistrictModel_removeParents_OutputMessage">
+    <wsdl:part name="parameters" element="tns:removeParentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDistrictModel_removeChildren_InputMessage">
+    <wsdl:part name="parameters" element="tns:removeChildren" />
+  </wsdl:message>
+  <wsdl:message name="IDistrictModel_removeChildren_OutputMessage">
+    <wsdl:part name="parameters" element="tns:removeChildrenResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IDistrictModel">
+    <wsdl:operation name="addType">
+      <wsdl:input wsaw:Action="http://siliconholler.net/geopolitical/IDistrictModel/addType" message="tns:IDistrictModel_addType_InputMessage" />
+      <wsdl:output wsaw:Action="http://siliconholler.net/geopolitical/IDistrictModel/addTypeResponse" message="tns:IDistrictModel_addType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateType">
+      <wsdl:input wsaw:Action="http://siliconholler.net/geopolitical/IDistrictModel/updateType" message="tns:IDistrictModel_updateType_InputMessage" />
+      <wsdl:output wsaw:Action="http://siliconholler.net/geopolitical/IDistrictModel/updateTypeResponse" message="tns:IDistrictModel_updateType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addDistrict">
+      <wsdl:input wsaw:Action="http://siliconholler.net/geopolitical/IDistrictModel/addDistrict" message="tns:IDistrictModel_addDistrict_InputMessage" />
+      <wsdl:output wsaw:Action="http://siliconholler.net/geopolitical/IDistrictModel/addDistrictResponse" message="tns:IDistrictModel_addDistrict_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateDistrict">
+      <wsdl:input wsaw:Action="http://siliconholler.net/geopolitical/IDistrictModel/updateDistrict" message="tns:IDistrictModel_updateDistrict_InputMessage" />
+      <wsdl:output wsaw:Action="http://siliconholler.net/geopolitical/IDistrictModel/updateDistrictResponse" message="tns:IDistrictModel_updateDistrict_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteDistrict">
+      <wsdl:input wsaw:Action="http://siliconholler.net/geopolitical/IDistrictModel/deleteDistrict" message="tns:IDistrictModel_deleteDistrict_InputMessage" />
+      <wsdl:output wsaw:Action="http://siliconholler.net/geopolitical/IDistrictModel/deleteDistrictResponse" message="tns:IDistrictModel_deleteDistrict_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addParent">
+      <wsdl:input wsaw:Action="http://siliconholler.net/geopolitical/IDistrictModel/addParent" message="tns:IDistrictModel_addParent_InputMessage" />
+      <wsdl:output wsaw:Action="http://siliconholler.net/geopolitical/IDistrictModel/addParentResponse" message="tns:IDistrictModel_addParent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="removeParent">
+      <wsdl:input wsaw:Action="http://siliconholler.net/geopolitical/IDistrictModel/removeParent" message="tns:IDistrictModel_removeParent_InputMessage" />
+      <wsdl:output wsaw:Action="http://siliconholler.net/geopolitical/IDistrictModel/removeParentResponse" message="tns:IDistrictModel_removeParent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="removeParents">
+      <wsdl:input wsaw:Action="http://siliconholler.net/geopolitical/IDistrictModel/removeParents" message="tns:IDistrictModel_removeParents_InputMessage" />
+      <wsdl:output wsaw:Action="http://siliconholler.net/geopolitical/IDistrictModel/removeParentsResponse" message="tns:IDistrictModel_removeParents_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="removeChildren">
+      <wsdl:input wsaw:Action="http://siliconholler.net/geopolitical/IDistrictModel/removeChildren" message="tns:IDistrictModel_removeChildren_InputMessage" />
+      <wsdl:output wsaw:Action="http://siliconholler.net/geopolitical/IDistrictModel/removeChildrenResponse" message="tns:IDistrictModel_removeChildren_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

@@ -1,0 +1,7 @@
+C:\Users\David\Desktop\precinct_captains\VoterWatch\systemlists\bin\systemlists.dll
+C:\Users\David\Desktop\precinct_captains\VoterWatch\systemlists\bin\systemlists.pdb
+C:\Users\David\Desktop\precinct_captains\VoterWatch\systemlists\bin\VoterWatch.dll
+C:\Users\David\Desktop\precinct_captains\VoterWatch\systemlists\bin\VoterWatch.pdb
+C:\Users\David\Desktop\precinct_captains\VoterWatch\systemlists\obj\Release\systemlists.dll
+C:\Users\David\Desktop\precinct_captains\VoterWatch\systemlists\obj\Release\systemlists.pdb
+C:\Users\David\Desktop\precinct_captains\VoterWatch\systemlists\obj\Release\systemlists.csprojResolveAssemblyReference.cache
